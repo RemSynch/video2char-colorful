@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .oh {
+            position: relative;
+            overflow: hidden;
+        }
+
+        #video {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="oh">
+    <div class="file-upload">
+        <label for="inputFile" class="custom-file-upload">
+            选择视频文件
+        </label>
+        <input type="file" id="inputFile" accept=".mp4"/>
+    </div>
+    <canvas id="canvasShow"></canvas>
+    <video id="video"></video>
+</div>
+
+<script src="./index.js"></script>
+</body>
+<style>
+    .oh {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 20px;
+    }
+
+    .file-upload {
+        position: relative;
+        display: inline-block;
+    }
+
+    .custom-file-upload {
+        display: inline-block;
+        padding: 8px 18px;
+        cursor: pointer;
+        background-color: #fd6565; /* 绿色背景 */
+        color: white; /* 白色字体 */
+        border-radius: 5px; /* 圆角边框 */
+        transition: background-color 0.3s;
+        font-size: 14px;
+    }
+
+    .custom-file-upload:hover {
+        background-color: #ff9c9c; /* 悬停时的颜色 */
+    }
+
+    input[type="file"] {
+        display: none; /* 隐藏原始的文件输入 */
+    }
+
+    #canvasShow {
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+
+    #video {
+        display: block;
+        border-radius: 10px;
+    }
+</style>
+</html>
